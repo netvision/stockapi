@@ -2,7 +2,7 @@ const axios = require('axios').default;
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 3000;
 app.use(cors())
 app.get('/indices', (req, res) => {
     const url = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/gainers/niftyGainers1.json';
